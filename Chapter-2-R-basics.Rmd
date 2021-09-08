@@ -1,10 +1,10 @@
 ---
 title: 'Chapter 2: R basics'
 output:
-  pdf_document: default
-  html_notebook: default
   html_document:
     df_print: paged
+  html_notebook: default
+  pdf_document: default
 ---
 
 In this book, we will be using the R software environment for all our analysis. You will learn R and data analysis techniques simultaneously. To follow along you will therefore need access to R. We also recommend the use of an *integrated development environment* (IDE), such as RStudio, to save your work. Note that it is common for a course or workshop to offer access to an R environment and an IDE through your web browser, as done by RStudio cloud^[12](https://rafalab.github.io/dsbook/r-basics.html#fn12)^. If you have access to such a resource, you don't need to install R and RStudio. However, if you intend on becoming an advanced data analyst, we highly recommend installing these tools on your computer^[13](https://rafalab.github.io/dsbook/r-basics.html#fn13)^. Both R and RStudio are free and available online.
@@ -1473,4 +1473,4 @@ hist(population_in_millions)
 boxplot(population~region, data=murders)
 
 ```
-
+ 
