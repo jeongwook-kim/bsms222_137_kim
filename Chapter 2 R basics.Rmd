@@ -1,6 +1,8 @@
 ---
-title: "Chapter 2: R basics"
+title: 'Chapter 2: R basics'
 output:
+  html_document:
+    df_print: paged
   html_notebook: default
   pdf_document: default
 ---
@@ -665,7 +667,7 @@ But be careful not to confuse the single quote ' with the back quote \`.
 By now you should know that if you type:
 
 ```{r}
-country <- c(italy, canada, egypt)
+#country <- c(italy, canada, egypt)
 
 ```
 
