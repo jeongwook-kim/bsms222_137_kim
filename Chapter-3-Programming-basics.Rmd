@@ -313,7 +313,7 @@ altman_plot <- function(x,y) {
   plot(x+y,y-x)
 }
 ```
-
+ 
 6. After running the code below, what is the value of x?
 
 ```{r}
