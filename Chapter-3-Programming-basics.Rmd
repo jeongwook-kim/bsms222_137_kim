@@ -305,7 +305,7 @@ sum_n <- function(n){
 }
 
 sum_n(5000)
-```
+``` 
 
 5. Create a function altman_plot that takes two arguments, x and y, and plots the difference against the sum.
 ```{r}
