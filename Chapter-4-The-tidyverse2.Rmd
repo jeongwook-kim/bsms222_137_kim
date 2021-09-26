@@ -535,7 +535,8 @@ murders_tibble
 3. Use the group_by function to convert murders into a tibble that is grouped by region.
 ```{r warning=FALSE, paged.print=FALSE}
 library(tidyverse)
-group_by(murders_tibble,region)%>%
+murders%>%
+  group_by(region)%>%
   arrange(region)
 ```
 4. Write tidyverse code that is equivalent to this code:
@@ -554,7 +555,7 @@ murders%>%
 
 ```
 5. Use the map_df to create a data frame with three columns named n, s_n, and s_n_2. The first column should contain the numbers 1 through 100. The second and third columns should each contain the sum of 1 through $n$ with $n$ the row number.
-```{r}
+```{r paged.print=FALSE}
 
 compute_s_n <- function(n){
   x <- 1:n
