@@ -242,11 +242,17 @@ p <- murders %>%
 
 To change the y-axis to a log scale we learned about the scale_x_log10() function. Add this layer to the object p to change the scale and render the plot.
 ```{r}
+p <- murders %>% 
+  ggplot(aes(population, total, label = abb, color = region)) +
+  geom_label() 
 p+scale_x_log10()
 ```
 
 15. Repeat the previous exercise but now change both axes to be in the log scale.
 ```{r}
+p <- murders %>% 
+  ggplot(aes(population, total, label = abb, color = region)) +
+  geom_label() 
 p + scale_x_log10() + scale_y_log10()
 
 ```
@@ -254,6 +260,9 @@ p + scale_x_log10() + scale_y_log10()
 16. Now edit the code above to add the title “Gun murder data” to the plot. Hint: use the ggtitle function.
 
 ```{r}
+p <- murders %>% 
+  ggplot(aes(population, total, label = abb, color = region)) +
+  geom_label() 
 p + scale_x_log10() + scale_y_log10() + ggtitle("Gun murder data")
 ```
 
