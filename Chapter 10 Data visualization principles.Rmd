@@ -609,7 +609,7 @@ This plot makes a very striking argument for the contribution of vaccines. Howev
 
 avg <- us_contagious_diseases %>%
   filter(disease==the_disease) %>% group_by(year) %>%
-  summarize(us_rate = sum(count, na.rm = TRUE) / 
+  summarize(us_rate = sum(count*52/weeks_reporting, na.rm = TRUE) / 
               sum(population, na.rm = TRUE) * 10000)
 ```
 
@@ -663,7 +663,7 @@ dat1%>%
 ```{r}
 avg <- us_contagious_diseases %>%
   filter(disease=="Smallpox") %>% group_by(year) %>%
-  summarize(us_rate = sum(count, na.rm=TRUE)/sum(population, na.rm=TRUE)*10000)
+  summarize(us_rate = sum(count*52/weeks_reporting, na.rm=TRUE)/sum(population, na.rm=TRUE)*10000)
 
 dat1 %>% ggplot() +
   geom_line(aes(year, rate, group = state),  color = "grey50", 
@@ -692,7 +692,7 @@ us_contagious_diseases%>%
 us_contagious_diseases %>%
   filter(!is.na(population)) %>% 
   group_by(year, disease) %>%
-  summarize(rate=sum(count)/sum(population)*10000) %>%
+  summarize(rate=sum(count*52/weeks_reporting,na.rm =T )/sum(population)*10000) %>%
   ggplot(aes(year, rate,color=disease)) + 
   geom_line()
 ```
